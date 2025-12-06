@@ -1,0 +1,19 @@
+{
+  "name": "CA02 - Block high-risk sign-ins",
+  "state": "enabled",
+  "conditions": {
+    "users": {
+      "includeGroups": [
+        "grp-zero-trust-standard-users"
+      ]
+    },
+    "applications": {
+      "includeApplications": [ "All cloud apps" ]
+    },
+    "signInRiskLevels": [ "high" ]
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [ "block" ]
+  }
+}
